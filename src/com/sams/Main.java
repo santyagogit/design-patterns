@@ -1,13 +1,13 @@
 package com.sams;
 
-import com.sams.linked_list.LinkedList;
+import com.sams.memento.Editor;
 
 public class Main {
     public static void main(String[] args) {
-        var list = new LinkedList();
-        list.addLast(10);
-        list.addLast(20);
-        list.addLast(30);
-        System.out.println(list.contains(10));
+        var editor = new Editor();
+        editor.setContent("a");
+        editor.setContent("b");
+        editor.setContent("c");
+        editor.undo();
     }
 }
